@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Harris-Benedict</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+    .calculator {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+    .calculator h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    .calculator label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .calculator input, .calculator select, .calculator button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .calculator button {
+      background-color: #007bff;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .calculator button:hover {
+      background-color: #0056b3;
+    }
+    .result {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <h1>Calculadora Harris-Benedict</h1>
+    <label for="gender">Sexo:</label>
+    <select id="gender">
+      <option value="male">Homem</option>
+      <option value="female">Mulher</option>
+    </select>
+
+    <label for="age">Idade (anos):</label>
+    <input type="number" id="age" placeholder="Digite sua idade" required>
+
+    <label for="height">Altura (cm):</label>
+    <input type="number" id="height" placeholder="Digite sua altura" required>
+
+    <label for="weight">Peso (kg):</label>
+    <input type="number" id="weight" placeholder="Digite seu peso" required>
+
+    <label for="activity">Nível de atividade:</label>
+    <select id="activity">
+      <option value="1.2">Sedentário</option>
+      <option value="1.375">Pouco ativo</option>
+      <option value="1.55">Moderadamente ativo</option>
+      <option value="1.725">Muito ativo</option>
+      <option value="1.9">Extremamente ativo</option>
+    </select>
+
+    <button onclick="calculateTMB()">Calcular TMB</button>
+
+    <div class="result" id="result"></div>
+  </div>
+
+  <script>
+    function calculateTMB() {
+      const gender = document.getElementById('gender').value;
+      const age = parseFloat(document.getElementById('age').value);
+      const height = parseFloat(document.getElementById('height').value);
+      const weight = parseFloat(document.getElementById('weight').value);
+      const activity = parseFloat(document.getElementById('activity').value);
+
+      if (isNaN(age) || isNaN(height) || isNaN(weight) || isNaN(activity)) {
+        document.getElementById('result').textContent = 'Por favor, preencha todos os campos corretamente.';
+        return;
+      }
+
+      let tmb;
+      if (gender === 'male') {
+        tmb = 88.36 + (13.4 * weight) + (4.8 * height) - (5.7 * age);
+      } else {
+        tmb = 447.6 + (9.2 * weight) + (3.1 * height) - (4.3 * age);
+      }
+
+      const tmbWithActivity = tmb * activity;
+
+      document.getElementById('result').textContent = `Sua Taxa Metabólica Basal (TMB) é ${tmb.toFixed(2)} kcal/dia. Com o nível de atividade selecionado, sua necessidade calórica diária é ${tmbWithActivity.toFixed(2)} kcal.`;
+    }
+  </script>
+</body>
+</html>
