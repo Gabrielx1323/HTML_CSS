@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: Titulo;
+    src: url('assets/fonts/young-serif/YoungSerif-Regular.ttf');
+}
+
+@font-face {
+    font-family: tempo;
+    src: url('assets/fonts/outfit/static/Outfit-Medium.ttf');
+}
+
+@font-face {
+    font-family: Sub-Titulo;
+    src: url('assets/fonts/outfit/static/Outfit-Light.ttf');
+}
+
+@font-face {
+    font-family: texto;
+    src: url('assets/fonts/outfit/Outfit-VariableFont_wght.ttf');
+}
+
+
+
+
+
+body {
+    background-color: #F2E4D8;
+    margin-top: 150px;
+}
+
+div#interface {
+    border: 5px solid white;
+    border-radius: 25px;
+    margin: auto 400px auto 475px;
+    width: 850px;
+    box-shadow: 0px 0px -10px rgba(0, 0, 0, 0.5);
+    text-align: justify;
+    padding-top: 25px;
+    background-color: white;
+}
+
+
+
+img#imagem {
+    padding-top: 20px;
+    border-radius: 28px;
+    padding: 0px 0px 0px 50px;
+    
+}
+
+
+h1#inicio {
+font-family: Titulo;
+font-size: 50px;
+text-align: justify;
+margin: 27px 0px 0px 27px;
+font-weight: 100;
+
+}
+
+p.texto {
+    font-family: texto;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 0px 25px 0px 25px;
+    text-align: justify;
+
+}
+
+
+div#caixa {
+    border: 5px solid #FFF7FC;
+    background-color: #FFF7FC;
+    width: 785px;
+    margin: 30px 30px 30px 30px;
+    border-radius: 25;
+}
+
+h3#rosa {
+    color: #5a263ee0;
+    font-family: texto;
+    text-align: justify;
+    margin: 0px 0px 30px 45px;
+    font-size: 25px;
+    
+}
+
+
+li.tempo {
+    font-family: texto;
+    font-size: 20px;
+    text-align: justify;
+    margin: 0px 0px 0px 10px;
+
+
+    
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+
+ul li::before {
+    content: ".";
+    color: #5a263e;
+    font-weight: bold;
+    display: inline-block;
+    width: 3em;
+    height: -1em;
+    
+}
+
+h3.faz {
+    font-family: Titulo;
+    font-size: 35px;
+    text-align: left;
+    margin: 0px 0px 0px 40px;
+    color: #7F4439;
+    font-weight: 500;
+}
+
+
+ul.ing {
+    font-size: 18px;
+    font-weight: 300;
+    font-family: texto;
+    
+}
+
+
+hr {
+    width: 800px;
+    opacity: 0.3;
+}
+
+span.num {
+    color: #7F4439;
+    margin: 0px 18px 0px 0px;
+    
+}
+
+p.ins {
+    font-family: texto;
+    font-size: 17px;
+    font-weight: 300;
+    padding: 0px 25px 0px 25px;
+    
+
+}
+
+span.esp {
+    margin: 0px 0px 0px 37px;
+}
+
+b.ok {
+    opacity: 0.8;
+}
