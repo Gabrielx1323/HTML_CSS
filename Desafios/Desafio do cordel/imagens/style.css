@@ -11,6 +11,12 @@ font-family: "Passion One", serif;
 
 font-family: "Sriracha", serif;  */
 
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', serif;
+    --fonte3: 'Sriracha', serif;
+}
+
 
 
 * {
@@ -22,6 +28,7 @@ font-family: "Sriracha", serif;  */
 html,body {
     background-color: darkgray;
     min-height: 100vh;
+    font-family: var(--fonte1);
 }
 
 
@@ -30,11 +37,13 @@ header {
     background-color: black;
     color: white;
     text-align: center;
+    
 }
 
 header > h1 {
-    padding-top: 50px;
-    font-variant: small-caps;
+    
+    
+    
 }
 
 header > p {
@@ -51,10 +60,11 @@ main#corpo {
 }
 
 h1 {
-    font-family: "Passion One", serif;
-    font-size: 3em;
     padding: 30px 0px 10px 0px;
-    
+    font-size: 7.5vw;
+    padding-top: 50px;
+    font-variant: small-caps;
+    font-family: var(--fonte2);
 }
 
 section {
@@ -62,25 +72,29 @@ section {
     padding-bottom: 10vh;
     line-height: 2em;
     padding-left: 30px;
+    font-family: var(--fonte3);
+    font-size: 2em;
 
 }
 
 section.normal {
-    font-family: "Sriracha", serif;
-    font-size: 18px;
+    font-family: var(--fonte3);
     background-color: white
-    color: black;
+  color(black)
     
 }
 
 section.imagem {
     background-color: rgb(54, 54, 54);
     color: white;
+    font-family: var(--fonte3);
+
     
 }
 
 section.imagem > p {
-    width: 400px;
+    display: inline-block;
+    padding: 5px;
     background-color: rgba(0, 0, 0, 0.247);
 }
 
@@ -88,7 +102,7 @@ section.imagem > p {
 
 header a,footer a {
 color: white;
-font-family: "Passion One", serif;
+font-family: var(--fonte2);
 padding: 0px 0px 30px 0px;
 display: block;
 font-weight: bolder;
