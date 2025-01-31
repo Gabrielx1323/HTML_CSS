@@ -26,7 +26,7 @@ font-family: "Sriracha", serif;  */
 
 
 html,body {
-    background-color: darkgray;
+    
     min-height: 100vh;
     font-family: var(--fonte1);
 }
@@ -77,6 +77,10 @@ section {
 
 }
 
+section > p {
+    padding-bottom: 2em;
+}
+
 section.normal {
     font-family: var(--fonte3);
     background-color: white
@@ -93,9 +97,10 @@ section.imagem {
 }
 
 section.imagem > p {
-    display: inline-block;
+    padding-bottom: 2em;
     padding: 5px;
     background-color: rgba(0, 0, 0, 0.247);
+    
 }
 
 
