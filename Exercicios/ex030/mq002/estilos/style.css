@@ -1,3 +1,12 @@
 @charset "UTF-8";
 
 /* Configuraçoes Gerais */
+
+html, body {
+   width: 98vw;
+   height: 100vh;
+   background-color: #233eff;
+   background-size: contain;
+   background-repeat: no-repeat;
+   
+}
