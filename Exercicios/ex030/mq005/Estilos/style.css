@@ -1,5 +1,15 @@
 @charset "UTF-8";
 
+/* Para telas pequenas e ate max 600px */
+
+/* Pra Celulares e (Tablets Pequenos) min 601 max 767 */
+
+/* Para Tablets min 768 max 991 */
+
+/* Para Destops min 992 max 1199 */
+
+/* Para Telas Grades Min 1200 */ 
+
 * {
     padding: 0px;
     margin: 0px;
@@ -40,7 +50,6 @@ menu > ul > li > a {
     color: white;
     border-top: 2px solid rgba(223, 220, 220, 0.651);
     margin-left: 10px;
-    margin-right: 10px;
 }
 
 menu > ul > li > a:hover {

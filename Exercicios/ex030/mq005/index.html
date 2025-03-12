@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Estilos/style.css">
+    <link rel="stylesheet" href="Estilos/media-query.css">
     <title>Media Queries</title>
 </head>
-<body>
+<body onresize="mudoutamanho()">
     <header>
          <h1>Meu Site</h1>
          <svg id="BK" onclick="clickMenu()" xmlns="http://www.w3.org/2000/svg" height="60px" viewBox="0 -960 960 960" width="60px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
@@ -44,6 +45,14 @@
                 itens.style.display = 'block'
             }
         }
+
+        function mudoutamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
+            }
+     }
         
         
     </script>
