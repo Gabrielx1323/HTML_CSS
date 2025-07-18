@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+<style>
+     nav {
+           border: 3px solid blue;
+           display: grid;
+           grid-template: 1fr 1fr 1fr / auto auto auto;
+           gap: 10px;
+           place-content: normal normal;
+           place-items: normal normal;
+           text-align: center;
+           grid-auto-rows: 80px;
+           grid-auto-flow: row;  
+        }
+        div {
+           border: 3px solid red;
+        }
+</style>
+</head>
+<body>
+<main>
+<nav>
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+    <div>G</div>
+    <div>H</div>
+    <div>I</div>    
+    <div>J</div>    
+</nav>
+</main>
+</body>
+</html>
